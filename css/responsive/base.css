@@ -1,0 +1,69 @@
+/*  =============================================================
+    RESPONSIVE BASE
+   =============================================================   */
+
+
+/*  Main Section / Container
+    =============================================================  */
+
+    .container {
+        margin: 0 auto;
+        padding: 0 10px;
+        max-width: 1180px;
+        overflow: hidden;
+    }
+
+
+/*  =============================================================
+    COLUMN DEFINITIONS
+    =============================================================   */
+
+    /*  No Gutter
+    =============================================================   */
+
+    #main_page,
+    #main_side {
+        display: inline-block;
+        margin: 0;
+        vertical-align: top;
+        letter-spacing: 0;
+    }
+
+    #main_page {
+        float: left;
+        width: 64%;
+    }
+
+    #main_side {
+        float: right;
+        width: 28%;
+    }
+
+    .all-columns {
+        clear: both; width: 100%;
+    }
+
+
+
+    /*  Defaults
+    =============================================================   */
+
+    .section img.mobile {
+        width: 100%;
+        height: auto;
+    }
+
+    .table-cell {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .section .mobile-only,
+    .mobile-only {
+        display: none;
+    }
+
+
+
+	

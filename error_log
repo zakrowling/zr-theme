@@ -1,0 +1,1 @@
+[29-Jun-2015 07:17:00 UTC] PHP Fatal error:  Call to undefined function is_home() in /home/zakrowling/public_html/wp-content/themes/zakrowling/header.php on line 10
