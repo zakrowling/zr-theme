@@ -28,7 +28,7 @@
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" media="screen,projection" />
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/responsive/media-queries.css" type="text/css" media="screen,projection" />
 
-<link href="http://fonts.googleapis.com/css?family=Halant" rel="stylesheet" type="text/css" />
+<link href="http://fonts.googleapis.com/css?family=Halant:300" rel="stylesheet" type="text/css" />
 <link href="http://fonts.googleapis.com/css?family=Poppins:300,600" rel="stylesheet" type="text/css" />
 
 <script src="http://code.jquery.com/jquery-1.8.3.js" type="text/javascript"></script>
@@ -75,9 +75,9 @@
 			?>
 
 			<ul id="header_menu" class="<?php echo $active_item ?>">
-				<li><a href="<?php echo site_url(); ?>" class="menu-item">Home</a></li>
-				<li><a href="about-resume" class="menu-item about">About</a></li>
-				<li><a href="javascript:;" id="show_main_menu" class="menu-item work">Work</a></li>
+				<li><a href="<?php echo site_url(); ?>" class="work menu-item">Work</a></li>
+				<li><a href="about" class="menu-item about">About</a></li>
+				<li><a href="mailto:zakrowling@gmail.com" class="menu-item">Contact</a></li>
 			</ul>
 
 			<ul id="main_menu" class="mobile-none clearfix">
@@ -88,10 +88,9 @@
 			<div id="footer" class="mobile-none">
 			
 				<div class="social">
-					<a href="mailto:zakrowling@gmail.com"><img width="40" src="<?php bloginfo('template_url'); ?>/images/icons/email.png" alt="EM" /></a>
 					<a href="https://au.linkedin.com/in/zakrowling" target="_blank"><img width="40" src="<?php bloginfo('template_url'); ?>/images/icons/linkedin.png" alt="LI" /></a>
 					<a href="http://www.instagram.com/zakrowling" target="_blank"><img width="40" src="<?php bloginfo('template_url'); ?>/images/icons/instagram.png" alt="IG" /></a>
-					<!--<a href="http://www.soundcloud.com/weakling" target="_blank"><img width="40" src="<?php bloginfo('template_url'); ?>/images/icons/soundcloud.png" alt="SC" /></a>-->
+					<a href="http://www.soundcloud.com/weakling" target="_blank"><img width="40" src="<?php bloginfo('template_url'); ?>/images/icons/soundcloud.png" alt="SC" /></a>
 				</div><!--social-->
 				
 			</div><!--footer-->

@@ -16,11 +16,6 @@ body {
 	background: #2d2b29 no-repeat center center;	
 }
 
-body.home {
-	overflow: hidden;
-	height: 100vh;
-}
-
 
 /*	=============================================================
 	MAIN ELEMENTS
@@ -35,10 +30,15 @@ body.home {
 	height: 80px;
 	text-align: right;
 	background: rgba(45,43,41,0.9);
+	border-bottom: 1px #38332d solid;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
 }
 
-body.home #header {
-	display: none;
+#header.hidden {
+	top: -100px;
 }
 
 #header-i {
@@ -73,12 +73,19 @@ body.home #header {
 
 #footer {
 	position: fixed;
-	top: -58px;
+	top: -10px;
 	right: 7px;
-	margin-top: 50px;
 	text-align: center;
 	font-size: 0.8em;
 	color: #ffffff;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+#footer.hidden {
+	top: -100px;
 }
 
 
@@ -156,39 +163,55 @@ body.home #header {
 #main_menu {
 	clear: both;
 	display: none;
-	padding-top: 20px;
-	width: 100%;
+	padding-top: 2vh;
+	width: 100vw;
 	height: 100vh;
+	-moz-animation-name: fade-animate;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: ease;
+	-moz-animation-duration: 1s;
+	-webkit-animation-name: fade-animate;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-duration: 1s;
+	animation-name: fade-animate;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	animation-duration: 1s;
 }
 
 #header-i.active #main_menu {
 	display: block;
+        text-align: center;
+        width: 100%;
 	-moz-animation-name: fade-animate;
 	-moz-animation-iteration-count: 1;
 	-moz-animation-timing-function: ease;
-	-moz-animation-duration: 0.5s;
+	-moz-animation-duration: 1s;
 	-webkit-animation-name: fade-animate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-timing-function: ease;
-	-webkit-animation-duration: 0.5s;
+	-webkit-animation-duration: 1s;
 	animation-name: fade-animate;
 	animation-iteration-count: 1;
 	animation-timing-function: ease;
-	animation-duration: 0.5s;
+	animation-duration: 1s;
 }
 
 #main_menu li {
-	padding: 10px 0 10px 0;
+	padding: 0.5vh 0;
 }
 
 #main_menu li a:link,
 #main_menu li a:visited {
-	display: block;
+	padding: 0;
 	text-decoration: none;
 	letter-spacing: 1px;
-	text-align: center;
-	font-size: 4vh;
-	color: #888;
+        font-size: 1.4em;
+        font-weight: bold;
+        letter-spacing: 3px;
+	color: #aaa;
+        line-height: 2em;
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
@@ -217,6 +240,7 @@ body.home #header {
 #main_menu li a:hover,
 #main_menu li.current_page_item a:hover {
 	color: #d8a731;
+	border-color: #d8a731;
 }
 
 
@@ -388,17 +412,12 @@ h1.page_title {
 	=============================================================	*/
 
 body.home #page {
-	padding: 0 12%;
-        display: table;
-	box-sizing: border-box;
-	height: 100%;
 	width: 100%;
 }
-	
+
 #page .home_content {
-	display: table-cell;
-	vertical-align: middle;
-	color: #fff;
+	padding: 100px 0 10px 0;
+	font-size: 1.4em;
 }
 
 #page .home_content h3 {
@@ -418,7 +437,7 @@ body.home #page {
 #page .home_content .profile_image {
 	background: url(https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-19/s320x320/12816993_1080535652004508_1776315401_a.jpg) no-repeat center center;
 	background-size: 100px 100px;
-	display: inline-block;
+	float: right;
 	width: 100px;
 	height: 100px;
 	border-radius: 100px;
@@ -445,63 +464,276 @@ body.home #page {
 	animation-duration: 4s;
 }
 
-#page .home_content .profile_image,
-#page .home_content .gold,
-#page .home_content em {
-	-moz-animation-name: page-animate;
-	-moz-animation-iteration-count: 1;
-	-moz-animation-timing-function: ease;
-	-moz-animation-duration: 1.5s;
-	-webkit-animation-name: page-animate;
-	-webkit-animation-iteration-count: 1;
-	-webkit-animation-timing-function: ease;
-	-webkit-animation-duration: 1.5s;
-	animation-name: page-animate;
-	animation-iteration-count: 1;
-	animation-timing-function: ease;
-	animation-duration: 1.5s;
-}
-
-#page .home_content p {
+body.home #header {
 	-moz-animation-name: fade-animate;
 	-moz-animation-iteration-count: 1;
 	-moz-animation-timing-function: ease;
-	-moz-animation-duration: 4s;
+	-moz-animation-duration: 5s;
 	-webkit-animation-name: fade-animate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-timing-function: ease;
-	-webkit-animation-duration: 4s;
+	-webkit-animation-duration: 5s;
 	animation-name: fade-animate;
 	animation-iteration-count: 1;
 	animation-timing-function: ease;
-	animation-duration: 4s;
+	animation-duration: 5s;
 }
 
-@-webkit-keyframes letter-animate {
-    0% {
-        letter-spacing: -24px;
-    }
-    100% {
-        letter-spacing: -1px;
-    }
+#page .work a {
+	position: relative;
+	overflow: hidden;
+	border-radius: 3px;
+	-moz-animation-name: scale-animate;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: ease;
+	-moz-animation-duration: 5s;
+	-webkit-animation-name: scale-animate;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-duration: 5s;
+	animation-name: scale-animate;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	animation-duration: 5s;
 }
 
-@keyframes letter-animate {
-    0% {
-        letter-spacing: -24px;
-    }
-    100% {
-        letter-spacing: -1px;
-    }
+#page .home_content {
+	color: #fff;
+	-moz-animation-name: page-animate;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: ease;
+	-moz-animation-duration: 2s;
+	-webkit-animation-name: page-animate;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-duration: 2s;
+	animation-name: page-animate;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	animation-duration: 2s;
 }
 
-@-webkit-keyframes letter-animate {
-    0% {
-        letter-spacing: -24px;
-    }
-    100% {
-        letter-spacing: -1px;
-    }
+#page .work a:link:nth-child(1),
+#page .work a:visited:nth-child(1) {
+	font-size: 1.3em;
+	width: 46vw;
+	height: 74vh;
+	-moz-animation-duration: 5s;
+	-webkit-animation-duration: 5s;
+	animation-duration: 5s;
+}
+
+#page .work a:link:nth-child(2),
+#page .work a:visited:nth-child(2) {
+	font-size: 1.3em;
+	width: 46vw;
+	height: 74vh;
+	-moz-animation-duration: 6s;
+	-webkit-animation-duration: 6s;
+	animation-duration: 6s;
+}
+
+#page .work a:nth-child(3) {
+	-moz-animation-duration: 7s;
+	-webkit-animation-duration: 7s;
+	animation-duration: 7s;
+}
+
+#page .work a:nth-child(4) {
+	-moz-animation-duration: 8s;
+	-webkit-animation-duration: 8s;
+	animation-duration: 8s;
+}
+
+#page .work a:nth-child(5) {
+	-moz-animation-duration: 9s;
+	-webkit-animation-duration: 9s;
+	animation-duration: 9s;
+}
+
+#page .work a:link:nth-child(6),
+#page .work a:visited:nth-child(6) {
+	font-size: 0.85em;
+	width: 22vw;
+	height: 38vh;
+	-moz-animation-duration: 10s;
+	-webkit-animation-duration: 10s;
+	animation-duration: 10s;
+}
+
+#page .work a:link:nth-child(7),
+#page .work a:visited:nth-child(7) {
+	font-size: 0.85em;
+	width: 22vw;
+	height: 38vh;
+	-moz-animation-duration: 11s;
+	-webkit-animation-duration: 11s;
+	animation-duration: 11s;
+}
+
+#page .work a:link:nth-child(8),
+#page .work a:visited:nth-child(8) {
+	font-size: 0.85em;
+	width: 22vw;
+	height: 38vh;
+	-moz-animation-duration: 12s;
+	-webkit-animation-duration: 12s;
+	animation-duration: 12s;
+}
+
+#page .work a:link:nth-child(9),
+#page .work a:visited:nth-child(9) {
+	font-size: 0.85em;
+	width: 22vw;
+	height: 38vh;
+	-moz-animation-duration: 13s;
+	-webkit-animation-duration: 13s;
+	animation-duration: 13s;
+}
+
+#page .work a small {
+	letter-spacing: 1px;
+	opacity: 0.5;
+	font: 0.8em "Halant", Georgia, Serif;
+	text-transform: none;
+}
+
+#page .work a .devices {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+#page .work a:hover .devices,
+#page .work a:hover .devices.show-mobile,
+#page .work a:hover .devices.personal {
+	opacity: 1;
+	-moz-animation-name: zoom-animate-single;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: ease-in-out;
+	-moz-animation-duration: 1s;
+	-webkit-animation-name: zoom-animate-single;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-duration: 1s;
+	animation-name: zoom-animate-single;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-duration: 1s;
+}
+
+#page .work a:hover .devices.mobile {
+	-moz-animation-name: zoom-animate;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: ease-in-out;
+	-moz-animation-duration: 1s;
+	-webkit-animation-name: zoom-animate;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-duration: 1s;
+	animation-name: zoom-animate;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-duration: 1s;
+}
+
+
+#page .work a .devices {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(45,43,41,0.95);
+	background-image: url('http://zakrowling.com/wp-content/themes/zakrowling/images/home/macbook.png');
+	background-position: center 70%;
+	background-size: auto 30%;
+	background-repeat: no-repeat;
+}
+
+#page .work a .devices.show-mobile {
+	background-image: url('http://zakrowling.com/wp-content/themes/zakrowling/images/home/iphone.png');
+}
+
+#page .work a .devices.mobile {
+	background-image: url('http://zakrowling.com/wp-content/themes/zakrowling/images/home/macbook.png'),
+		url('http://zakrowling.com/wp-content/themes/zakrowling/images/home/iphone.png');
+	background-position: 20% 70%, 80% 70%;
+}
+
+#page .work a .devices.personal {
+	background-image: url('http://zakrowling.com/wp-content/themes/zakrowling/images/home/mpc.png');
+}
+
+
+#page .work a .devices em {
+	display: inline-block;
+	padding-top: 20%;
+	color: #fff;
+	text-decoration: none;
+	letter-spacing: 3px;
+	font: bold 1em "Poppins", Arial, Sans-serif;
+	text-transform: uppercase;
+}
+
+#page .home_content strong {
+	font-weight: normal;
+	opacity: 0.5;
+}
+
+#page .work {
+	text-align: center;
+}
+
+#page .work a:link,
+#page .work a:visited {
+	display: inline-block;
+	width: 30vw;
+	height: 50vh;
+	margin: 0.7% 1%;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	background-size: cover;
+	background-position: center center;
+}
+
+#page .case-studies {
+	text-align: center;
+	padding: 0 10%;
+}
+
+#page .case-study {
+	float: left;
+	padding: 22px 0 45px;
+	width: 33.3%;
+	font-size: 0.8em;
+}
+
+#page .case-study {
+	text-align: center;
+	opacity: 0.7;
+}
+
+#page .case-study:hover {
+	opacity: 1;
+}
+
+#page .case-study h1 a:link,
+#page .case-study h1 a:visited {
+	color: #fff;
+	text-decoration: none;
+	font: bold 1em "Poppins", Arial, Sans-serif;
+	text-transform: uppercase;
+}
+
+#page .case-study h1 a:hover {
+	border-bottom: 1px #d8a731 solid;
+}
+
+#page .case-study p {
+	padding-top: 7px;
 }
 
 @keyframes page-animate {
@@ -573,11 +805,166 @@ body.home #page {
     }
 }
 
+@keyframes scale-animate {
+    0% {
+	-webkit-transform: translateY(30px);
+	transform: translateY(30px);
+	opacity: 0;
+    }
+    70% {
+	-webkit-transform: translateY(30px);
+	transform: translateY(30px);
+	opacity: 0;
+    }
+    100% {
+	-webkit-transform: translateY(0px);
+	transform: translateY(0px);
+	opacity: 1;
+    }
+}
+
+@-webkit-keyframes scale-animate {
+    0% {
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	opacity: 0;
+    }
+    50% {
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	opacity: 0;
+    }
+    90% {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+	opacity: 0;
+    }
+    100% {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+    }
+}
+
+@-moz-keyframes scale-animate {
+    0% {
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	opacity: 0;
+    }
+    50% {
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	opacity: 0;
+    }
+    90% {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+	opacity: 0;
+    }
+    100% {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+    }
+}
+
+@keyframes zoom-animate {
+    0% {
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	background-position: -100% 70%, 200% 70%;
+    }
+    50% {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+    }
+    100% {
+	background-position: 20% 70%, 80% 70%;
+    }
+}
+
+@-webkit-keyframes zoom-animate {
+    0% {
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	background-position: -100% 70%, 200% 70%;
+    }
+    60% {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+    }
+    100% {
+	background-position: 20% 70%, 80% 70%;
+    }
+}
+
+@-moz-keyframes zoom-animate {
+    0% {
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	background-position: -100% 70%, 200% 70%;
+    }
+    60% {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+    }
+    100% {
+	background-position: 20% 70%, 80% 70%;
+    }
+}
+
+@keyframes zoom-animate-single {
+    0% {
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	background-position: center 150%;
+    }
+    60% {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+    }
+    100% {
+	background-position: center 70%;
+    }
+}
+
+@-webkit-keyframes zoom-animate-single {
+    0% {
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	background-position: center 200%;
+    }
+    60% {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+    }
+    100% {
+	background-position: center 70%;
+    }
+}
+
+@-moz-keyframes zoom-animate-single {
+    0% {
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	background-position: center 200%;
+    }
+    60% {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+    }
+    100% {
+	background-position: center 70%;
+    }
+}
+
 /*	=============================================================	
 	GALLERY
 	-------------------------------------------------------------	*/
 
 #gallery p:not(:first-child),
+#gallery .image_description:not(:first-child),
 #gallery img.item,
 #page .work_menu {
 	-moz-animation-name: fade-animate;
