@@ -9,11 +9,13 @@
 	
 body {
 	height: 90vh;
-	font: 21px "Halant", Georgia, Serif;
+	font: 21px "Frank Ruhl Libre", Georgia, Serif;
 	font-style: normal;
 	text-align: left;
-	color: #989898;
+	color: #a9a9a9;
 	background: #2d2b29 no-repeat center center;	
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
 }
 
 
@@ -63,7 +65,6 @@ body {
 #page .content {
 	position: relative;
 	z-index: 10;
-	width: 1000px;
 	text-align: left;
 }
 
@@ -342,7 +343,21 @@ p {
 
 #page a:link,
 #page a:visited {
-	color: #6d6d6d;
+	text-decoration: none;
+	color: #efefef;
+}
+
+#page a:hover {
+	color: #d8a731;
+}
+
+#page #gallery a:link,
+#page #gallery a:visited {
+	border-bottom: 1px #efefef solid;
+}
+
+#page #gallery a:hover {
+	border-bottom: 1px #d8a731 dotted;
 }
 
 #page a.gold_link:link,
@@ -354,6 +369,7 @@ p {
         text-decoration: none;
         text-transform: uppercase;
         border: 1px #d8a731 solid;
+	border-radius: 2px;
         font: 0.7em "Poppins", Arial, Sans-serif;
         letter-spacing: 3px;
 	color: #d8a731;
@@ -427,7 +443,7 @@ body.home #page {
 #page .home_content em {
 	text-transform: none;
 	letter-spacing: 0px;
-	font: 0.75em "Halant", Georgia, Serif;
+	font-size: 0.75em;
 }
 
 #page .home_content p {
@@ -502,19 +518,29 @@ body.home #header {
 	-moz-animation-name: page-animate;
 	-moz-animation-iteration-count: 1;
 	-moz-animation-timing-function: ease;
-	-moz-animation-duration: 2s;
+	-moz-animation-duration: 1s;
 	-webkit-animation-name: page-animate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-timing-function: ease;
-	-webkit-animation-duration: 2s;
+	-webkit-animation-duration: 1s;
 	animation-name: page-animate;
 	animation-iteration-count: 1;
 	animation-timing-function: ease;
-	animation-duration: 2s;
+	animation-duration: 1s;
 }
 
 #page .work a:link:nth-child(1),
 #page .work a:visited:nth-child(1) {
+	font-size: 1.3em;
+	width: 46vw;
+	height: 74vh;
+	-moz-animation-duration: 4s;
+	-webkit-animation-duration: 4s;
+	animation-duration: 4s;
+}
+
+#page .work a:link:nth-child(2),
+#page .work a:visited:nth-child(2) {
 	font-size: 1.3em;
 	width: 46vw;
 	height: 74vh;
@@ -523,36 +549,36 @@ body.home #header {
 	animation-duration: 5s;
 }
 
-#page .work a:link:nth-child(2),
-#page .work a:visited:nth-child(2) {
-	font-size: 1.3em;
-	width: 46vw;
-	height: 74vh;
+#page .work a:nth-child(3) {
 	-moz-animation-duration: 6s;
 	-webkit-animation-duration: 6s;
 	animation-duration: 6s;
 }
 
-#page .work a:nth-child(3) {
+#page .work a:nth-child(4) {
 	-moz-animation-duration: 7s;
 	-webkit-animation-duration: 7s;
 	animation-duration: 7s;
 }
 
-#page .work a:nth-child(4) {
+#page .work a:nth-child(5) {
 	-moz-animation-duration: 8s;
 	-webkit-animation-duration: 8s;
 	animation-duration: 8s;
 }
 
-#page .work a:nth-child(5) {
+#page .work a:link:nth-child(6),
+#page .work a:visited:nth-child(6) {
+	font-size: 0.85em;
+	width: 22vw;
+	height: 38vh;
 	-moz-animation-duration: 9s;
 	-webkit-animation-duration: 9s;
 	animation-duration: 9s;
 }
 
-#page .work a:link:nth-child(6),
-#page .work a:visited:nth-child(6) {
+#page .work a:link:nth-child(7),
+#page .work a:visited:nth-child(7) {
 	font-size: 0.85em;
 	width: 22vw;
 	height: 38vh;
@@ -561,8 +587,8 @@ body.home #header {
 	animation-duration: 10s;
 }
 
-#page .work a:link:nth-child(7),
-#page .work a:visited:nth-child(7) {
+#page .work a:link:nth-child(8),
+#page .work a:visited:nth-child(8) {
 	font-size: 0.85em;
 	width: 22vw;
 	height: 38vh;
@@ -571,8 +597,8 @@ body.home #header {
 	animation-duration: 11s;
 }
 
-#page .work a:link:nth-child(8),
-#page .work a:visited:nth-child(8) {
+#page .work a:link:nth-child(9),
+#page .work a:visited:nth-child(9) {
 	font-size: 0.85em;
 	width: 22vw;
 	height: 38vh;
@@ -581,20 +607,10 @@ body.home #header {
 	animation-duration: 12s;
 }
 
-#page .work a:link:nth-child(9),
-#page .work a:visited:nth-child(9) {
-	font-size: 0.85em;
-	width: 22vw;
-	height: 38vh;
-	-moz-animation-duration: 13s;
-	-webkit-animation-duration: 13s;
-	animation-duration: 13s;
-}
-
 #page .work a small {
 	letter-spacing: 1px;
 	opacity: 0.5;
-	font: 0.8em "Halant", Georgia, Serif;
+	font: 0.8em "Frank Ruhl Libre", Georgia, serif;
 	text-transform: none;
 }
 
@@ -1044,44 +1060,247 @@ body.home #header {
 
 
 /*	=============================================================	
-	QUESTIONS
+	FAKE CHAT
 	-------------------------------------------------------------	*/
 
-#page .question {
-	float: left;
-	padding-right: 8%;
-	width: 45%;
-	color: #703441;
+#page #gallery .options {
+	position: fixed;
+	padding: 20px 0;
+	z-index: 100;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	bottom: 10px;
+	-moz-animation: show-options 1 ease 1s;
+	-webkit-animation: show-options 1 ease 1s;
+	animation: show-options 1 ease 1s;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
 }
 
-#page .question.last {
-	padding-right: 0;
-	color: #454545;
-}
-
-#page .question h2 a:link,
-#page .question h2 a:visited {
-	display: block;
-	padding: 4px 12px;
+#page #gallery .options a:link,
+#page #gallery .options a:visited {
+	margin: 0 4px;
+	padding: 10px 20px;
+	border: 1px #d8a731 solid;
+	border-radius: 2px;
+	font-size: 1em;
+	color: #d8a731;
 	text-decoration: none;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-size: 0.9em;
-	color: #ffffff;
-	background: #891350;
+	background: rgba(45,43,41,0.7);
 }
 
-#page .question.last h2 a:link,
-#page .question.last h2 a:visited {
-	background: #656565;
+#page #gallery .options a:hover {
+	color: #fff;
+	border-color: #fff;
 }
 
-#page .question strong {
-	color: #881c54;
+#page #gallery .messages {
+	width: 80%;
+	margin: 0 auto;
+	padding: 60px 0 112px 0;
 }
 
-#page .question.last strong {
-	color: #454545;
+#page #gallery .messages p {
+	position: relative;
+	display: none;
+	float: left;
+	clear: both;
+	padding: 14px 20px;
+	margin: 10px 0;
+	max-width: 80%;
+	font-size: 1em;
+	line-height: 1.55em;
+	color: #ababab;
+	background: #312f2d;
+	border-radius: 2px;
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+}
+
+#page #gallery .messages p.question {
+	left: 12%;
+	max-width: 70%;
+}
+
+#page #gallery .messages p.question::before {
+	display: block;
+	position: absolute;
+	top: -24px;
+	left: -80px;
+	-moz-transform: scale(0.4);
+	-webkit-transform: scale(0.4);
+	transform: scale(0.4);
+	content: url('http://zakrowling.com/wp-content/themes/zakrowling/images/avatar.png');
+}
+
+#page #gallery .messages .message:first-child p {
+	-moz-animation: text-pop 1 ease 0.5s;
+	-webkit-animation: text-pop 1 ease 0.5s;
+	animation: text-pop 1 ease 0.5s;
+}
+
+#page #gallery .messages p.loading {
+	-moz-animation: text-load infinite ease 0.5s;
+	-webkit-animation: text-load infinite ease 0.5s;
+	animation: text-load infinite ease 0.5s;
+}
+
+#page #gallery .messages .message:first-child p:first-child,
+#page #gallery .messages .message.active p:first-child,
+#page #gallery .messages .message.asked p {
+	display: block;
+}
+
+#page #gallery .messages p.response {
+	float: right;
+	color: #fff;
+	background: #d8a731;
+	-moz-animation: text-animate 1 ease 0.5s;
+	-webkit-animation: text-animate 1 ease 0.5s;
+	animation: text-animate 1 ease 0.5s;
+}
+
+
+/*	=============================================================	
+	FAKE CHAT ANIMATIONS
+	-------------------------------------------------------------	*/
+
+@-moz-keyframes show-options {
+    0% {
+        bottom: -100px;
+    }
+    50% {
+        bottom: -100px;
+    }
+    100% {
+        bottom: 10px;
+    }
+}
+@-webkit-keyframes show-options {
+    0% {
+        bottom: -100px;
+    }
+    50% {
+        bottom: -100px;
+    }
+    100% {
+        bottom: 10px;
+    }    
+}
+@keyframes show-options {
+    0% {
+        bottom: -100px;
+    }
+    50% {
+        bottom: -100px;
+    }
+    100% {
+        bottom: 10px;
+    }   
+}
+
+
+@-moz-keyframes text-animate {
+    0% {
+        -moz-transform: translateY(30px);
+	opacity: 0;
+    }
+    100% {
+        -moz-transform: translateY(0);
+	opacity: 1;
+    }
+}
+@-webkit-keyframes text-animate {
+    0% {
+        -webkit-transform: translateY(30px);
+	opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+	opacity: 1;
+    }
+}
+@keyframes text-animate {
+    0% {
+        transform: translate(-60px,50px);
+	opacity: 0;
+    }
+    100% {
+        transform: translate(0,0);
+	opacity: 1;
+    }
+}
+
+
+@-moz-keyframes text-pop {
+    0% {
+        -moz-transform: scale(0);
+	opacity: 0;
+    }
+    100% {
+        -moz-transform: scale(1);
+	opacity: 1;
+    }
+}
+@-webkit-keyframes text-pop {
+    0% {
+        -webkit-transform: scale(0);
+	opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(1);
+	opacity: 1;
+    }
+}
+@keyframes text-pop {
+    0% {
+        transform: scale(0);
+	opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+	opacity: 1;
+    }
+}
+
+
+@-moz-keyframes text-load {
+    0% {
+        -moz-transform: scale(1);
+    }
+    50% {
+    	-moz-transform: scale(0.95);
+    	-moz-box-shadow: inset 0 0 100px #3d3b39;
+    }
+    100% {
+        -moz-transform: scale(1);
+    }
+}
+@-webkit-keyframes text-load {
+    0% {
+        -webkit-transform: scale(1);
+    }
+    50% {
+    	-webkit-transform: scale(0.95);
+    	-webkit-box-shadow: inset 0 0 100px #3d3b39;
+    }
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+@keyframes text-load {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+    	transform: scale(0.95);
+    	box-shadow: inset 0 0 100px #3d3b39;
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 
@@ -1092,55 +1311,6 @@ body.home #header {
 #page_footer {
 	clear: both;
 }
-
-#page a.button.go_back:link,
-#page a.button.go_back:visited {
-	position: fixed;
-	top: 20px;
-	right: 20px;
-	font: 1.15em "Times New Roman", serif;
-	display: none;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 100px;
-        border-width: 3px;
-}
-
-
-/*	=============================================================	
-	FORM STYLING
-	-------------------------------------------------------------	*/
-
-#page form input,
-#page form textarea,
-#page form select {
-	padding: 6px 7px;
-	width: 85%;
-	font: 1em "Amiri", Arial, Sans-serif;
-}
-
-#page form input:focus,
-#paget form textarea:focus,
-#page form select:focus {
-	color: #3e402d;
-	background: #efefef;
-}
-
-#page form .wpcf7-submit {
-	cursor: pointer;
-	margin: 20px 0 12px 0;
-	width: 50%;
-	padding: 8px 15px;
-	text-transform: uppercase;
-	font-weight: bold;
-	font: 0.9em "Amiri", Arial, Sans-serif;
-}
-
-
-
-/*	=============================================================	
-	FOOTER
-	-------------------------------------------------------------	*/
 	
 #footer .social {
 	clear: both;
@@ -1159,11 +1329,11 @@ body.home #header {
 }
 
 #footer .social img:hover {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: alpha(opacity=100);
-  -moz-opacity: 1;
-  -khtml-opacity: 1;
-  opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	-moz-opacity: 1;
+	-khtml-opacity: 1;
+	opacity: 1;
 }
 	
 #footer h2 {
