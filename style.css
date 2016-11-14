@@ -757,38 +757,6 @@ body.home #header {
 	padding: 0 10%;
 }
 
-#page .case-study {
-	float: left;
-	padding: 22px 0 45px;
-	width: 33.3%;
-	font-size: 0.8em;
-}
-
-#page .case-study {
-	text-align: center;
-	opacity: 0.7;
-}
-
-#page .case-study:hover {
-	opacity: 1;
-}
-
-#page .case-study h1 a:link,
-#page .case-study h1 a:visited {
-	color: #fff;
-	text-decoration: none;
-	font: bold 1em "Poppins", Arial, Sans-serif;
-	text-transform: uppercase;
-}
-
-#page .case-study h1 a:hover {
-	border-bottom: 1px #d8a731 solid;
-}
-
-#page .case-study p {
-	padding-top: 7px;
-}
-
 @keyframes page-animate {
     0% {
         transform: translateY(20px);
