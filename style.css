@@ -1,5 +1,5 @@
 /*	=============================================================
-	MOLTO BENE STYLE SHEET
+	ZAK ROWLING STYLE SHEET
 	-------------------------------------------------------------
 	=============================================================	*/
 	
@@ -20,7 +20,8 @@ body {
 
 body.home {
 	color: #c8c7c4;
-	background: #2d2b29;	
+	background: #2d2b29;
+	overflow-x: hidden;
 }
 
 
@@ -452,7 +453,7 @@ body.home #page {
 }
 
 body.home #header {
-	background: rgba(45,43,41,0.9);
+	background: rgba(45,43,41,0.8);
 }
 
 body.home #header .logo a:link,
@@ -465,10 +466,17 @@ body.home #header_menu li.current_page_item a:visited {
 	color: #fff;
 }
 
+body.home canvas {
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	opacity: 0.8;
+}
+
 #page .home_content {
-	padding: 100px 20px 70px 20px;
-    width: 46%;
-    margin: auto;
+	padding: 28vh 20px 16vh 20px;
+	width: 46%;
+	margin: auto;
 }
 
 #page .home_content h1 {
@@ -518,6 +526,27 @@ body.home #header_menu li.current_page_item a:visited {
 	border-bottom: 3px #fff solid;
 }
 
+#page .home_content.clients {
+	padding: 0 0 6vh;
+	text-align: center;
+}
+
+#page .work-client {
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	height: 80px;
+	margin: 5px 12px 0;
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+	filter: grayscale(100%);
+	opacity: 0.7
+}
+
+#page .work-client:hover {
+	opacity: 1;
+}
+
 body.home #header,
 body.home #footer {
 	-moz-animation-name: fade-animate;
@@ -536,15 +565,15 @@ body.home #footer {
 
 #page .home_content h1 {
 	color: #fff;
-	-moz-animation-name: page-animate;
+	-moz-animation-name: blur-animate;
 	-moz-animation-iteration-count: 1;
 	-moz-animation-timing-function: ease;
 	-moz-animation-duration: 1s;
-	-webkit-animation-name: page-animate;
+	-webkit-animation-name: blur-animate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-timing-function: ease;
 	-webkit-animation-duration: 1s;
-	animation-name: page-animate;
+	animation-name: blur-animate;
 	animation-iteration-count: 1;
 	animation-timing-function: ease;
 	animation-duration: 1s;
@@ -576,27 +605,49 @@ body.home #footer {
 	position: relative;
 	display: inline-block;
 	width: 100%;
-	height: 84vh;
-	margin: 10% 0;
+	height: 82vh;
+	margin: 12% 0;
 	text-align: left;
-	opacity: 0;
-	color: transparent;
+	opacity: 1;
+	color: #fff;
+	-webkit-transition: opacity 0.5s ease;
+	-moz-transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
 	background-size: 65%;
 	background-repeat: no-repeat;
 	background-position: left center;
 }
 
-#page .work a.animated {
-	opacity: 1;
-	color: #ffffff;
-	-moz-animation: block-reveal ease-in-out 1s;
-	-webkit-animation: block-reveal ease-in-out 1s;
-	animation: block-reveal ease-in-out 1s;
+#page .work a span em,
+#page .work a span em small {
+	-webkit-transition: opacity 0.5s ease;
+	-moz-transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
+	opacity: 0;
 }
 
-#page .work a.animated strong,
-#page .work a.animated small {
-	color: #fff;
+#page .work a.animated span em,
+#page .work a.animated span small {
+	opacity: 1;
+	-moz-animation-name: page-animate;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: ease;
+	-moz-animation-duration: 1s;
+	-webkit-animation-name: page-animate;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-duration: 1s;
+	animation-name: page-animate;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	animation-duration: 1s;
+}
+
+#page .work a.animated span small {
+	color: #c8c7c4;
+	-moz-animation-duration: 1.3s;
+	-webkit-animation-duration: 1.3s;
+	animation-duration: 1.3s;
 }
 
 #page .work a:first-child {
@@ -654,7 +705,7 @@ body.home #footer {
 #page .work a .devices small {
 	display: block;
 	padding-top: 3%;
-	letter-spacing: 1px;
+	letter-spacing: 0px;
 	opacity: 0.7;
 	font: 1em "Droid Serif", Georgia, Serif;
 	line-height: 1.7em;
@@ -678,6 +729,9 @@ body.home #footer {
 	bottom: 23px;
 	right: 23px;
 	opacity: 0.5;
+	padding-top: 30px;
+	background: url('images/icons/arrows.svg') top center no-repeat;
+	background-size: 18px;
 	-moz-animation-name: fade-animate;
 	-moz-animation-iteration-count: 1;
 	-moz-animation-timing-function: ease;
@@ -724,32 +778,6 @@ body.home #footer {
 	background: #d8a731;
 }
 
-@keyframes block-reveal {
-    0% {
-    	background-image: none;
-    	box-shadow: inset 0px 0px 0px -1px #d8a731;
-    	color: rgba(0,0,0,0);
-    }
-    30% {
-    	box-shadow: inset 100vw 0px 0px -1px #d8a731;
-    }
-    50% {
-    	background-image: inherit;
-    }
-    70% {
-    	box-shadow: inset 100vw 0px 0px -1px #d8a731;
-    	color: rgba(0,0,0,0);
-    }
-    71% {
-    	box-shadow: inset -100vw 0px 0px -1px #d8a731;
-    	color: rgba(0,0,0,0);
-    }
-    100% {
-    	box-shadow: inset 0px 0px 0px -1px #d8a731;
-    	color: rgba(255,255,255,1);
-    }
-}
-
 @keyframes page-animate {
     0% {
         transform: translateY(20px);
@@ -780,6 +808,45 @@ body.home #footer {
     100% {
         -moz-transform: translateY(0);
 	opacity: 1;
+    }
+}
+
+@keyframes blur-animate {
+    0% {
+        transform: translateY(20px);
+	opacity: 0;
+	filter: blur(5px);
+    }
+    100% {
+        transform: translateY(0);
+	opacity: 1;
+	filter: blur(0);
+    }
+}
+
+@-webkit-keyframes blur-animate {
+    0% {
+        transform: translateY(20px);
+	opacity: 0;
+	-webkit-filter: blur(5px);
+    }
+    100% {
+        transform: translateY(0);
+	opacity: 1;
+	-webkit-filter: blur(0);
+    }
+}
+
+@-moz-keyframes blur-animate {
+    0% {
+        -moz-transform: translateY(20px);
+	opacity: 0;
+	-moz-filter: blur(5px);
+    }
+    100% {
+        -moz-transform: translateY(0);
+	opacity: 1;
+	-moz-filter: blur(0);
     }
 }
 
@@ -1025,15 +1092,15 @@ body.home #footer {
 
 #gallery .image_description h3,
 #contact h3 {
-	-moz-animation-name: page-animate;
+	-moz-animation-name: blur-animate;
 	-moz-animation-iteration-count: 1;
 	-moz-animation-timing-function: ease;
 	-moz-animation-duration: 1.5s;
-	-webkit-animation-name: page-animate;
+	-webkit-animation-name: blur-animate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-timing-function: ease;
 	-webkit-animation-duration: 1.5s;
-	animation-name: page-animate;
+	animation-name: blur-animate;
 	animation-iteration-count: 1;
 	animation-timing-function: ease;
 	animation-duration: 1.5s;
@@ -1215,6 +1282,21 @@ body.home #footer {
 }
 
 
+
+/*	=============================================================	
+	PASSWORD FORM
+	-------------------------------------------------------------	*/
+
+.password-form {
+	display: none;
+}
+
+#page #contact.subscribe.password-form {
+	display: block;
+	padding-top: 0%;
+}
+
+
 /*	=============================================================	
 	PAGE FOOTER
 	-------------------------------------------------------------	*/
@@ -1240,11 +1322,11 @@ body.home #footer {
 }
 
 #footer .social img:hover {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: alpha(opacity=100);
-  -moz-opacity: 1;
-  -khtml-opacity: 1;
-  opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	-moz-opacity: 1;
+	-khtml-opacity: 1;
+	opacity: 1;
 }
 	
 #footer h2 {
@@ -1337,7 +1419,7 @@ body.home #footer {
 	-moz-transform: scale(0.4);
 	-webkit-transform: scale(0.4);
 	transform: scale(0.4);
-	content: url('http://moltobene.co/wp-content/themes/moltobene/images/avatar.png');
+	content: url('images/avatar.png');
 }
 
 #page #gallery .messages .message:first-child p {
