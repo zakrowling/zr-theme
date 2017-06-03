@@ -3,12 +3,32 @@
 	<div id="page"<?php echo $homeClass ?>>
 		
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-		<?php if ( is_page() ) { ?>
+		<?php
+		$pageAccess = TRUE;
+		if ( post_password_required() ) {
+			$pageAccess = FALSE;
+			if ( isset( $_COOKIE['wp-postpass_' . COOKIEHASH] ) ) {
+				$pageAccess = TRUE;
+			}
+		}
+		
+		if ( is_page() && $pageAccess) { ?>
 			
 			<?php
-				if( is_front_page() ) { 
-					the_content();
+				if( is_front_page() ) { ?>
+					<canvas id="canvas" class="mobile-none" width="100%" height="736"></canvas>
+					<script>
+						var canvas = document.getElementById('canvas')
+						var ctx = canvas.getContext('2d')
+						canvas.width = innerWidth
+						canvas.height = innerHeight
+						var party = smokemachine(ctx, [255, 255, 255])
+						party.start() // start animating
+						setInterval(function(){
+							party.addsmoke(innerWidth/2, innerHeight, 1);
+						}, 200)
+					</script>
+					<?php the_content();
 				} else { ?>
 				
 				<?php $attachments = get_children(
@@ -108,7 +128,7 @@
 			<div id="blog">
 
 				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-				<h6 class="gold">Posted <strong><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago '; ?></strong></h6>
+				<h6>Posted <strong><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago '; ?></strong></h6>
 				<br/>
 				<?php the_content(); ?>
 				<?php if (is_single()) { ?>
@@ -119,8 +139,8 @@
 					<form action="//zakrowling.us14.list-manage.com/subscribe/post?u=c547b4e21d86a85103ce04940&amp;id=5a49841cf2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 					    <div id="mc_embed_signup_scroll">
 							<div class="mc-field-group clearfix">
-								<h2>Did you like this post? Subscribe for more insights, ideas, freebies and friendly rants</h2>
-								<input type="email" value="" name="EMAIL" class="left required email" placeholder="Please enter your email address" id="mce-EMAIL" required>
+								<h3>Subscribe for updates. No spam.</h3>
+								<input type="email" value="" name="EMAIL" class="left required email" placeholder="Enter your email address" id="mce-EMAIL" required>
 <button name="subscribe" id="mc-embedded-subscribe" class="left button">Subscribe</button>
 							</div>
 							<div id="mce-responses" class="clear">
