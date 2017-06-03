@@ -70,7 +70,7 @@
 		$label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
 		$o = '<div id="contact" class="password-form subscribe"><div id="mc_embed_signup"><form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">
     ' . __( "" ) . '
-		<label for="' . $label . '">' . __( "" ) . ' </label><input name="post_password" placeholder="Enter password to access this content page" id="' . $label . '" type="password" size="20" maxlength="20" /><input class="button" type="submit" name="Submit" value="' . esc_attr__( "Submit" ) . '" />
+		<label for="' . $label . '">' . __( "" ) . ' </label><input name="post_password" placeholder="Enter password to access this content page" id="' . $label . '" type="password" size="20" maxlength="20" /><button class="button" name="Submit" value="' . esc_attr__( "Submit" ) . '" />Access Content</button>
     		</form></div></div>
     	';
     	return $o;
@@ -93,8 +93,8 @@
 	    );
 	    $title = preg_replace($findthese, $replacewith, $title);
 	    return $title;
-	}
-	add_filter('the_title', 'the_title_trim');
+    }
+    add_filter('the_title', 'the_title_trim');
 	
 		
 	/* --------------------------------
