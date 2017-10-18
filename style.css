@@ -8,7 +8,6 @@
 	=============================================================	*/
 	
 body {
-	height: 90vh;
 	font: 22px "Droid Serif", Georgia, Serif;
 	font-style: normal;
 	text-align: left;
@@ -60,6 +59,7 @@ body.home {
 }
 
 #page {
+	min-height: 90vh;
 	width: 55%;
 	margin: 0 auto;
 	padding: 65px 0 50px 0px;
@@ -191,8 +191,8 @@ body.home {
 
 #header-i.active #main_menu {
 	display: block;
-        text-align: center;
-        width: 100%;
+	text-align: center;
+	width: 100%;
 	-moz-animation-name: fade-animate;
 	-moz-animation-iteration-count: 1;
 	-moz-animation-timing-function: ease;
@@ -216,11 +216,11 @@ body.home {
 	padding: 0;
 	text-decoration: none;
 	letter-spacing: 1px;
-        font-size: 1.4em;
-        font-weight: bold;
-        letter-spacing: 3px;
+	font-size: 1.4em;
+	font-weight: bold;
+	letter-spacing: 3px;
 	color: #787878;
-        line-height: 2em;
+	line-height: 2em;
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
@@ -278,7 +278,7 @@ h2 {
 h3 {
 	padding: 10px 0 5px 0;
 	font: 1.35em "Poppins", Arial, Sans-serif;
-        letter-spacing: 4px;
+	letter-spacing: 4px;
 	line-height: 1.1em;
 	font-weight: bold;
 	color: #2d2b29;
@@ -326,9 +326,7 @@ p {
 }
 
 #page p a:link,
-#page p a:visited,
-#page .home_content a:link,
-#page .home_content a:visited {
+#page p a:visited {
 	border-bottom: 3px #d8a731 solid;
 }
 
@@ -337,38 +335,71 @@ p {
 	color: #d8a731;
 }
 
-#page .home_content a:hover {
+#page .home_content a:link,
+#page .home_content a:visited {
+	display: inline-block;
+	position: relative;
+	margin: 30px 0 0;
+	padding: 14px 20px;
+	border-radius: 2px;
+	border: 0;
 	color: #fff;
-	border-bottom: 3px #fff solid;
+	background-color: #383634;
+	-moz-animation: up-and-down infinite ease 3.5s;
+	-webkit-animation: up-and-down infinite ease 3.5s;
+	animation: up-and-down infinite ease 3.5s;
+}
+
+#page .home_content a::before {
+ 	content: "";
+	position: absolute;
+	bottom: -10px;
+	left: 20px;
+	border-width: 10px 10px 0;
+	border-style: solid;
+	border-color: #383634 transparent;
+	display: block;
+	width: 0;
+	-webkit-transition: bottom 0.3s ease;
+	-moz-transition: bottom 0.3s ease;
+	transition: bottom 0.3s ease;
+}
+
+#page .home_content a:hover {
+	color: #d8a731;
+}
+
+#page .home_content a:hover:before {
+	bottom: 0px;
 }
 
 #page a.gold_link:link,
 #page a.gold_link:visited {
-        position: relative;
-        display: inline-block;
-        margin: 10px 0;
-        padding: 7px 18px;
-        text-decoration: none;
-        text-transform: uppercase;
-        border: 1px #d8a731 solid;
+	position: relative;
+	display: inline-block;
+	margin: 10px 0;
+	padding: 7px 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+	border: 1px #d8a731 solid;
 	border-radius: 2px;
-        font: 0.7em "Poppins", Arial, Sans-serif;
-        letter-spacing: 3px;
+	font: 0.7em "Poppins", Arial, Sans-serif;
+	letter-spacing: 3px;
 	color: #d8a731;
 }
 
 #page a.gold_link:hover {
 	color: #fff;
-        background-color: rgba(0,0,0,0.2);
+	background-color: rgba(0,0,0,0.2);
 }
 
 #page a.gold_link span {
-        position: absolute;
-        top: -16px;
-        left: -1px;
-        padding: 0 6px;
-        font-size: 0.8em;
-        letter-spacing: 1px;
+	position: absolute;
+	top: -16px;
+	left: -1px;
+	padding: 0 6px;
+	font-size: 0.8em;
+	letter-spacing: 1px;
 	color: #ffffff;
 	background-color: #d8a731;
 }
@@ -385,8 +416,13 @@ p {
 	line-height: 1.6em;
 }
 
+#page ol {
+	margin-left: 15px;
+}
+
 #page ol li {
 	list-style-type: decimal;
+	line-height: 1.6em;
 }
 
 #page .button,
@@ -396,15 +432,15 @@ p {
 	cursor: pointer;
 	clear: left;
 	float: left;
-        margin: 4px 0 22px 0;
-        padding: 7px 18px;
-        text-decoration: none;
-        text-transform: uppercase;
-        background: #d8a731;
+	margin: 4px 0 22px 0;
+	padding: 7px 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+	background: #d8a731;
 	border: none;
 	border-radius: 3px;
-        font: bold 0.8em "Poppins", Arial, Sans-serif;
-        letter-spacing: 3px;
+	font: bold 0.8em "Poppins", Arial, Sans-serif;
+	letter-spacing: 3px;
 	color: #fff;
 }
 
@@ -434,6 +470,13 @@ blockquote:before {
 blockquote p {
 	display: inline;
 	color: #212121;
+}
+
+code {
+	font-family: "Courier New", monospace;
+	background-color: #f9f9f9;
+	padding: 3px 7px;
+	border-radius: 3px;
 }
 
 
@@ -479,7 +522,7 @@ body.home canvas {
 }
 
 #page .home_content {
-	padding: 28vh 20px 16vh 20px;
+	padding: 26vh 20px 16vh 20px;
 	width: 46%;
 	margin: auto;
 }
@@ -487,7 +530,7 @@ body.home canvas {
 #page .home_content h1 {
 	padding-bottom: 20px;
 	font: bold 1.6em "Poppins", Arial, Sans-serif;
-	line-height: 1.2em;
+	line-height: 1.05em;
 	color: #fff;
 }
 
@@ -518,17 +561,6 @@ body.home canvas {
 #page .home_content p {
 	position: relative;
 	font-size: 0.8em;
-}
-
-#page .home_content a:link,
-#page .home_content a:visited {
-	color: #d8a731;
-	border-bottom: 3px #d8a731 solid;
-}
-
-#page .home_content a:hover {
-	color: #fff;
-	border-bottom: 3px #fff solid;
 }
 
 #page .home_content.clients {
@@ -691,7 +723,7 @@ body.home #footer {
 }
 
 #page .work a .devices strong {
-	font-size: 3em;
+	font-size: 2.85em;
 	line-height: 1em;
 }
 
@@ -720,8 +752,8 @@ body.home #footer {
 	padding-top: 3%;
 	letter-spacing: 0px;
 	opacity: 0.7;
-	font: 1em "Droid Serif", Georgia, Serif;
-	line-height: 1.7em;
+	font: 1.05em "Droid Serif", Georgia, Serif;
+	line-height: 1.6em;
 	text-transform: none;
 }
 
@@ -821,6 +853,51 @@ body.home #footer {
     100% {
         -moz-transform: translateY(0);
 	opacity: 1;
+    }
+}
+
+@keyframes up-and-down {
+    0% {
+        transform: translateY(-20px);
+    }
+    10% {
+        transform: translateY(0px);
+    }
+    90% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+@-webkit-keyframes up-and-down {
+    0% {
+        -webkit-transform: translateY(-20px);
+    }
+    10% {
+        -webkit-transform: translateY(0px);
+    }
+    90% {
+        -webkit-transform: translateY(0px);
+    }
+    100% {
+        -webkit-transform: translateY(-20px);
+    }
+}
+
+@-moz-keyframes up-and-down {
+    0% {
+        -moz-transform: translateY(-20px);
+    }
+    10% {
+        -moz-transform: translateY(0px);
+    }
+    90% {
+        -moz-transform: translateY(0px);
+    }
+    100% {
+        -moz-transform: translateY(-20px);
     }
 }
 
@@ -1165,18 +1242,18 @@ body.home #footer {
 /*	=============================================================	
 	BLOG
 	-------------------------------------------------------------	*/
-#page #blog,
+#page .blog,
 #page #contact {
 	padding: 12% 8% 5% 8%;
 	font-size: 0.9em;
 }
 
-#page #blog h2 {
+#page .blog h2 {
 	font-size: 1.3em;
 	line-height: 1.5em;
 }
 
-#page #blog h6 {
+#page .blog h6 {
 	text-transform: uppercase;
 	padding-top: 5px;
 	padding-bottom: 20px;
@@ -1184,15 +1261,17 @@ body.home #footer {
     	letter-spacing: 3px;
 }
 
-#page #blog .comment {
+#page .blog .comment {
 	padding: 2%;
 	text-align: center;
 	border: 1px #38332d solid
 }
 
-#page #blog iframe {
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
+#page .blog iframe {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+	filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
+    filter: gray;
 	-moz-animation-name: fade-animate;
 	-moz-animation-iteration-count: 1;
 	-moz-animation-timing-function: ease;
@@ -1214,6 +1293,11 @@ body.home #footer {
 	font: 0.7em "Poppins", Arial, Sans-serif;
 	letter-spacing: 3px;
 	color: #d8a731;
+}
+
+#page .pagination a:link,
+#page .pagination a:visited {
+	font-weight: bold;
 }
 
 
@@ -1390,12 +1474,12 @@ body.home #footer {
 	font-size: 0.9em;
 	color: #312f2d;
 	text-decoration: none;
-	background: rgba(255,255,255,0.3);
+	opacity: 1;
+	background: rgba(255,255,255,0.8);
 }
 
 #page #gallery .options a:hover {
-	color: #d8a731;
-	border-color: #d8a731;
+	opacity: 0.8;
 }
 
 #page #gallery .messages {
@@ -1464,6 +1548,26 @@ body.home #footer {
 	-moz-animation: text-animate 1 ease 0.5s;
 	-webkit-animation: text-animate 1 ease 0.5s;
 	animation: text-animate 1 ease 0.5s;
+}
+
+
+/*	=============================================================	
+	FAKE CHAT (HOMEPAGE)
+	-------------------------------------------------------------	*/
+
+body.home #page #gallery .messages p.question {
+	left: 0;
+	max-width: auto;
+	border: 1px #d8a731 solid;
+	background-color: transparent;
+	-moz-animation: text-pop 1 ease 0.5s;
+	-webkit-animation: text-pop 1 ease 0.5s;
+	animation: text-pop 1 ease 0.5s;
+}
+
+body.home #page #gallery .messages {
+	width: 87%;
+	padding-top: 20px;
 }
 
 
