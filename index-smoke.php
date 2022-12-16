@@ -1,13 +1,6 @@
 <?php get_header(); ?>
 
 	<div id="page"<?php echo $homeClass ?>>
-
-	<?php
-		// Count posts to display
-		$totalPosts = wp_count_posts()->publish;
-		$postCounter = $totalPosts;
-		$pageCounter = (get_query_var('paged')) * 10 - 10;
-	?>
 		
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<?php
@@ -23,8 +16,20 @@
 			
 			<?php
 				if( is_front_page() ) { ?>
-					<canvas id="canvas" class="snow" width="100%" height="736"></canvas>
-					<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js'></script><script  src="<?php bloginfo('template_url'); ?>/js/snow.js"></script>
+					<canvas id="canvas" class="mobile-none" width="100%" height="736"></canvas>
+					<script>
+						var canvas = document.getElementById('canvas')
+						var ctx = canvas.getContext('2d')
+						canvas.width = innerWidth
+						canvas.height = innerHeight
+						var party = smokemachine(ctx, [255, 255, 255])
+						if (!document.hidden) {
+							party.start() // start animating
+						}
+						setInterval(function(){
+							party.addsmoke(innerWidth/2, innerHeight, 1);
+						}, 200)
+					</script>
 					<?php the_content();
 				} else { ?>
 				
@@ -92,7 +97,7 @@
 							            						<h2><?php echo $image_title ?></h2>
 							            					<?php } ?>
 							            					<?php if ($image_caption) { ?>
-							            						<?php echo $image_caption ?>
+							            						<p><?php echo $image_caption ?></p>
 							            					<?php } ?>
 							            					
 							            				</div>
@@ -114,15 +119,10 @@
 			<?php } else { ?>
 			<div class="blog">
 			<div class="blog-title">
-				<?php if (get_query_var('paged') == 0) { $pageCounter = 0;}
-				// echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago '; 
-				?>
-				<h1 class="blog-name"><a href="<?php the_permalink(); ?>"><b><?php the_title(); ?></b></a></h1>
-				<?php if (!is_single()) { ?>
-					<h6>Post <?php echo $postCounter - $pageCounter ?> of <?php echo $totalPosts ?></h6>
-					<?php $postCounter--;?>
-				<?php } ?>
+				<h2><a href="<?php the_permalink(); ?>"><b><?php the_title(); ?></b></a></h2>
+				<h6>Posted <strong><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago '; ?></strong></h6>
 			</div>
+				<br/>
 				<?php the_content(); ?>
 				<?php if (is_single()) { ?>
 				<p>&nbsp;</p>
@@ -157,8 +157,8 @@
 			<?php endwhile; ?> 
 
 			<div class="clearit blog-pagination">
-				<div class="left pagination"><?php next_posts_link( '&laquo; Previous' ); ?></div>
-				<div class="right pagination"><?php previous_posts_link( 'Next &raquo;' ); ?></div>
+				<div class="left pagination"><?php next_posts_link( '&laquo; Previous page' ); ?></div>
+				<div class="right pagination"><?php previous_posts_link( 'Next page &raquo;' ); ?></div>
 			</div>
 
 			<?php else : ?>
@@ -172,4 +172,4 @@
 	</div><!--page-->
 
   
-<?php get_footer(); ?>
+<?php get_footer(); ?>  

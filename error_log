@@ -1,1 +1,120 @@
 [29-Jun-2015 07:17:00 UTC] PHP Fatal error:  Call to undefined function is_home() in /home/zakrowling/public_html/wp-content/themes/zakrowling/header.php on line 10
+[31-Mar-2017 18:37:34 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php on line 1
+[10-Sep-2017 10:49:41 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php on line 1
+[11-Sep-2017 18:38:34 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/index.php on line 1
+[11-Feb-2018 10:19:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/index.php on line 1
+[11-Feb-2018 10:19:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/index.php on line 1
+[07-May-2018 07:23:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php on line 1
+[08-Aug-2018 01:26:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_home() in /home/zakrowling/public_html/wp-content/themes/zakrowling/header.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/header.php on line 10
+[08-Aug-2018 01:26:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/index.php on line 1
+[08-Aug-2018 01:26:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php on line 1
+[08-Aug-2018 01:26:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_home() in /home/zakrowling/public_html/wp-content/themes/zakrowling/header.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/header.php on line 10
+[08-Aug-2018 01:26:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/index.php on line 1
+[08-Aug-2018 01:26:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php on line 1
+[30-Dec-2018 18:19:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_home() in /home/zakrowling/public_html/wp-content/themes/zakrowling/header.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/header.php on line 10
+[30-Dec-2018 18:19:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php on line 1
+[30-Dec-2018 18:19:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php on line 1
+[30-Dec-2018 18:19:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_home() in /home/zakrowling/public_html/wp-content/themes/zakrowling/header.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/header.php on line 10
+[16-Feb-2019 22:44:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php on line 1
+[16-Feb-2019 22:44:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_home() in /home/zakrowling/public_html/wp-content/themes/zakrowling/header.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/header.php on line 10
+[16-Feb-2019 22:44:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php on line 1
+[16-Feb-2019 22:44:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_home() in /home/zakrowling/public_html/wp-content/themes/zakrowling/header.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/header.php on line 10
+[16-Nov-2019 07:05:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php on line 1
+[16-Nov-2019 17:43:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php on line 1
+[18-Nov-2019 02:52:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php on line 1
+[18-Nov-2019 13:25:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php on line 1
+[13-Dec-2019 13:12:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php on line 1
+[14-Dec-2019 10:25:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php on line 1
+[15-Dec-2019 13:50:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php on line 1
+[16-Dec-2019 11:14:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php on line 1
+[13-Jan-2020 18:11:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php on line 1
+[14-Jan-2020 00:58:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php on line 1
+[15-Jan-2020 20:16:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php on line 1
+[16-Jan-2020 03:45:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/zakrowling/public_html/wp-content/themes/zakrowling/404.php on line 1
